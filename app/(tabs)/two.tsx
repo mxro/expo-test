@@ -1,17 +1,16 @@
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet } from "react-native";
 
-import { useIsFocused } from '@react-navigation/native';
+import { useIsFocused } from "@react-navigation/native";
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
-import { CameraView } from 'expo-camera';
+import { Text, View } from "@/components/Themed";
+import { CameraView } from "expo-camera";
 
 export default function TabTwoScreen() {
   const isFocused = useIsFocused();
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab Two</Text>
-      {isFocused && <CameraView style={styles.camera} facing={'front'} />}
+      {isFocused && <CameraView style={styles.camera} facing={"front"} />}
     </View>
   );
 }
@@ -19,24 +18,24 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   separator: {
     marginVertical: 30,
     height: 1,
-    width: '80%',
+    width: "80%",
   },
   message: {
-    textAlign: 'center',
+    textAlign: "center",
     paddingBottom: 10,
   },
   camera: {
     flex: 1,
-    width: '100%',
+    width: "100%",
   },
 });
